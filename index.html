@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceylon Aura | Sri Lankan Gifts</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <a href="#home" class="logo">
+        <div class="logo">
+        <img src="logo.png" alt="Ceylon Aura Logo">
+        CEYLON <span>AURA</span>
+        <small>THE SRI LANKAN DISCOVERY CORNER</small>
+
+    
+        
+    </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#products">Products</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#products" class="cart">Bag <span id="cartCount">0</span></a>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="eyebrow">A LITTLE PIECE OF PARADISE</p>
+
+        <h1>
+            Bring the spirit of
+            <em>Sri Lanka</em> to life.
+        </h1>
+
+        <p>
+            Discover authentic spices, beautiful handicrafts
+            and meaningful gifts inspired by our island's
+            rich culture.
+        </p>
+
+        <a href="#collections" class="btn">Explore Collections</a>
+    </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="intro section">
+    <div>
+        <p class="eyebrow">WELCOME TO CEYLON AURA</p>
+        <h2>More than a gift.<br>
+            <em>A story from Sri Lanka.</em>
+        </h2>
+    </div>
+
+    <p>
+        We bring the best of Sri Lanka to people who value
+        culture, quality and meaningful gifts. Explore
+        carefully selected local products and discover
+        the stories behind them.
+    </p>
+
+</section>
+
+<!-- COLLECTIONS -->
+<section class="section" id="collections">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">EXPLORE OUR WORLD</p>
+            <h2>Our Collections</h2>
+        </div>
+
+        <p>
+            Discover carefully selected Sri Lankan products
+            organised into special collections.
+        </p>
+    </div>
+
+    <div class="collection-grid">
+
+        <div class="collection spice">
+            <div>
+                <h3>The Spice Trails</h3>
+                <p>Premium Sri Lankan spices and spice-related products.</p>
+            </div>
+        </div>
+
+        <div class="collection artisan">
+            <div>
+                <h3>Artisan Traditions</h3>
+                <p>Handicrafts and decorative products inspired by Sri Lankan craftsmanship.</p>
+            </div>
+        </div>
+
+        <div class="collection island">
+            <div>
+                <h3>Island Memories</h3>
+                <p>Souvenirs and gifts representing Sri Lankan culture.</p>
+            </div>
+        </div>
+
+        <div class="collection kitchen">
+            <div>
+                <h3>Ceylon Kitchen</h3>
+                <p>Spice collections with recipe cards and cooking suggestions.</p>
+            </div>
+        </div>
+        <div class="collection gift">
+            <div>
+                <h3>Gift of Sri Lanka</h3>
+                <p>Discover beautiful gifts that bring the true beauty and culture of Sri Lanka.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PERSONALIZED GIFT BOX -->
+<section class="gift-section" id="custom-box">
+
+
+    <div class="gift-image">
+    <img src="gift bag.png" alt="Sri Lankan Spices">
+      </div>
+    </div>
+
+    <div class="gift-content">
+        <p class="eyebrow">MADE WITH MEANING</p>
+
+        <h2>Your Gift,<br>
+            <em>Your Story.</em>
+        </h2>
+
+        <p>
+            Create your own special gift box with your favourite
+            products. Choose based on your preferences,
+            occasion, recipient and budget.
+
+            Or explore our ready-made gift collections
+            for a hassle-free option.
+        </p>
+
+        <a href="#giftForm" class="btn">Create a Gift Box</a>
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">A TASTE OF THE ISLAND</p>
+            <h2>Featured Products</h2>
+        </div>
+
+        <p>
+            Thoughtful finds, local craftsmanship
+            and authentic island flavours.
+        </p>
+    </div>
+
+    <div class="filters">
+        <button class="filter active" data-filter="all">All Products</button>
+        <button class="filter" data-filter="spices">Spices</button>
+        <button class="filter" data-filter="craft">Handicrafts</button>
+        <button class="filter" data-filter="gifts">Gift Ideas</button>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card" data-category="spices">
+            <img src="Cinnamon.jpg" alt="Sri Lankan spices">
+
+            <div class="product-info">
+                <small>THE SPICE TRAILS</small>
+                <h3>Ceylon Cinnamon</h3>
+                <p>Authentic island flavour and aroma.</p>
+                <strong>Rs. 1,250</strong>
+                <button class="add-cart" data-product="Ceylon Cinnamon">
+                    Add to Bag +
+                </button>
+            </div>
+        </div>
+        <div class="product-card" data-category="spices">
+            <img src="pepper.jpg" alt="Sri Lankan spices">
+
+            <div class="product-info">
+                <small>THE SPICE TRAILS</small>
+                <h3>Ceylon Pepper</h3>
+                <p>Authentic island flavour and aroma.</p>
+                <strong>Rs. 2,000</strong>
+                <button class="add-cart" data-product="Ceylon Pepper">
+                    Add to Bag +
+                </button>
+            </div>
+        </div>
+        <div class="product-card" data-category="spices">
+            <img src="spices pac.jpg" alt="Sri Lankan spices">
+
+            <div class="product-info">
+                <small>THE SPICE TRAILS</small>
+                <h3>Ceylon Spices pack</h3>
+                <p>Authentic island flavour and aroma.</p>
+                <strong>Rs. 5,000</strong>
+                <button class="add-cart" data-product="Ceylon Spices pack">
+                    Add to Bag +
+                </button>
+            </div>
+        </div>
+        <div class="product-card" data-category="spices">
+            <img src="Cardomom.jpg" alt="Sri Lankan spices">
+
+            <div class="product-info">
+                <small>THE SPICE TRAILS</small>
+                <h3>Ceylon Cardamom</h3>
+                <p>Authentic island flavour and aroma.</p>
+                <strong>Rs. 10,000</strong>
+                <button class="add-cart" data-product="Ceylon Cardamom">
+                    Add to Bag +
+                </button>
+            </div>
+        </div>
+        <div class="product-card" data-category="spices">
+            <img src="Clove.jpg" alt="Sri Lankan spices">
+
+            <div class="product-info">
+                <small>THE SPICE TRAILS</small>
+                <h3>Ceylon Clove</h3>
+                <p>Authentic island flavour and aroma.</p>
+                <strong>Rs. 7,500</strong>
+                <button class="add-cart" data-product="Ceylon Clove">
+                    Add to Bag +
+                </button>
+            </div>
+        </div>
+        <div class="product-card" data-category="spices">
+            <img src="Star Anise.jpg" alt="Sri Lankan spices">
+
+            <div class="product-info">
+                <small>THE SPICE TRAILS</small>
+                <h3>Ceylon Star Anise</h3>
+                <p>Authentic island flavour and aroma.</p>
+                <strong>Rs. 3,000</strong>
+                <button class="add-cart" data-product="Ceylon Star Anise">
+                    Add to Bag +
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="craft">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=700" alt="Traditional art">
+
+            <div class="product-info">
+                <small>ARTISAN TRADITIONS</small>
+                <h3>Traditional Wooden Art</h3>
+                <p>A decorative piece inspired by local craft.</p>
+                <strong>Rs. 2,800</strong>
+                <button class="add-cart" data-product="Traditional Wooden Art">
+                    Add to Bag +
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="gifts">
+            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=700" alt="Gift box">
+
+            <div class="product-info">
+                <small>ISLAND MEMORIES</small>
+                <h3>Sri Lankan Gift Box</h3>
+                <p>A thoughtful selection for someone special.</p>
+                <strong>Rs. 3,500</strong>
+                <button class="add-cart" data-product="Sri Lankan Gift Box">
+                    Add to Bag +
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="note">
+        Sample products and prices. Replace with your actual products.
+    </p>
+</section>
+
+<!-- DISCOVERY CORNER -->
+<section class="experience" id="experience">
+
+    <div class="section experience-inner">
+
+        <div>
+            <p class="eyebrow">DISCOVER WITH ALL YOUR SENSES</p>
+
+            <h2>
+                The Sri Lankan<br>
+                <em>Discovery Corner</em>
+            </h2>
+
+            <p>
+                A unique space where shopping becomes an
+                experience. Explore, learn and feel the
+                true spirit of Sri Lanka.
+            </p>
+        </div>
+
+        <div class="experience-list">
+
+            <div>
+                <h3>01. Spice Aroma Station</h3>
+                <p>Smell and experience the unique aromas of selected spices.</p>
+            </div>
+
+            <div>
+                <h3>02. Cinnamon Discovery</h3>
+                <p>Explore different cinnamon varieties with informative displays.</p>
+            </div>
+
+            <div>
+                <h3>03. Craft Demonstrations</h3>
+                <p>Watch traditional handicraft-making techniques.</p>
+            </div>
+
+            <div>
+                <h3>04. Cultural Display Cards</h3>
+                <p>Learn about traditional designs and their cultural significance.</p>
+            </div>
+
+            <div>
+                <h3>05. Artisan Videos & Recipe Cards</h3>
+                <p>Discover crafting techniques, stories and Sri Lankan recipes.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section" id="about">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">THE CEYLON AURA PROMISE</p>
+            <h2>Why Choose Us?</h2>
+        </div>
+    </div>
+
+    <div class="why-grid">
+
+        <div>
+            <h3>Authentic Sri Lankan Products</h3>
+            <p>Discover products inspired by our island's heritage.</p>
+        </div>
+
+        <div>
+            <h3>Support Local Artisans</h3>
+            <p>Celebrate local artisans and communities.</p>
+        </div>
+
+        <div>
+            <h3>Quality and Fair Trade</h3>
+            <p>Meaningful products selected with care.</p>
+        </div>
+
+        <div>
+            <h3>Convenient Shopping</h3>
+            <p>Explore collections and shop online.</p>
+        </div>
+
+        <div>
+            <h3>Unique and Meaningful Gifts</h3>
+            <p>Special gifts for birthdays and occasions.</p>
+        </div>
+
+        <div>
+            <h3>Reliable Customer Care</h3>
+            <p>Friendly support for your shopping experience.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CUSTOMERS -->
+<section class="customers">
+    <div class="section">
+
+        <p class="eyebrow">MADE FOR EVERY KIND OF DISCOVERY</p>
+
+        <h2>Something special<br><em>for everyone.</em></h2>
+
+        <div class="customer-grid">
+
+            <div>
+                <h3>Tourists</h3>
+                <p>Authentic souvenirs and local experiences.</p>
+            </div>
+
+            <div>
+                <h3>Local Shoppers</h3>
+                <p>Unique gifts and quality handicrafts.</p>
+            </div>
+
+            <div>
+                <h3>Online Customers</h3>
+                <p>Convenient shopping from anywhere.</p>
+            </div>
+
+            <div>
+                <h3>Corporate Clients</h3>
+                <p>Branded gifts and bulk orders.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- GIFT BOX FORM -->
+<section class="section gift-builder">
+
+    <div>
+        <p class="eyebrow">MAKE IT PERSONAL</p>
+        <h2>Create Your Own<br><em>Gift Box.</em></h2>
+        <p>Choose your favourite items to plan a special gift.</p>
+    </div>
+
+    <form id="giftForm">
+
+        <label for="occasion">Choose your occasion</label>
+
+        <select id="occasion">
+            <option>Birthday</option>
+            <option>Thank You</option>
+            <option>Corporate Gift</option>
+            <option>Souvenir</option>
+        </select>
+
+        <p>Select your favourite products:</p>
+
+        <label><input type="checkbox" value="Ceylon spices"> Ceylon Spices</label>
+        <label><input type="checkbox" value="Handicrafts"> Handicrafts</label>
+        <label><input type="checkbox" value="Cinnamon"> Cinnamon</label>
+        <label><input type="checkbox" value="Souvenirs"> Souvenirs</label>
+
+        <button class="btn" type="submit">Build My Gift Idea</button>
+
+        <p id="giftMessage"></p>
+
+    </form>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <p class="eyebrow">A PIECE OF SRI LANKA, JUST FOR YOU</p>
+
+    <h2>
+        Bring a piece of Sri Lanka<br>
+        <em>into your life.</em>
+    </h2>
+
+    <p>Visit us or contact us today!</p>
+
+    <div class="contact-details">
+        <p>Kandy, Sri Lanka</p>
+        <p>076 410 2567</p>
+        <p>ceylonaura@gmail.com</p>
+    </div>
+
+    <a href="mailto:ceylonaura@gmail.com" class="btn">
+        Contact Us
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>CEYLON <span>AURA</span></h3>
+
+    <p>Authentic Culture. Meaningful Gifts.</p>
+
+    <p>© <span id="year"></span> Ceylon Aura. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
