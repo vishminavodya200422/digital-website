@@ -540,8 +540,38 @@ nav a:hover {
 /* EXPERIENCE */
 
 .experience {
-    background: var(--dark-green);
+    background: #5E1D1B;
     color: white;
+    background:url("discovery-corner.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(94, 29, 27, 0.7);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.experience > * {
+  position: relative;
+  z-index: 2;
+}
+
+.experience h2 {
+    color:#F9F5EE;
+    margin-bottom: 25px;
+}
+
+.experience .eyebrow {
+    text-shadow: 2px 4px 8px rgba(255, 255, 255, 0.9);
+    color: #d0c6c6;
+    font-size: 15px;
 }
 
 .experience-inner {
@@ -571,6 +601,58 @@ nav a:hover {
     font-size: 12px;
 }
 
+/*vision and mission*/
+
+.about{
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  padding-bottom: 56px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid rgba(94, 29, 27, 0.12); /* subtle divider separating from Why Choose Us */
+}
+
+.vm-card {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.vm-avatar {
+  width: 164px;
+  height: 164px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0; /* keeps the circle from squishing when text wraps */
+}
+
+.vm-content h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2b1414;
+  margin: 0 0 8px;
+}
+
+.vm-content p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #4f4743;
+  margin: 0;
+}
+
+/* Stack into 1 column on tablets/phones */
+@media (max-width: 860px) {
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 /* WHY CHOOSE US */
 
 .why-grid {
@@ -596,9 +678,16 @@ nav a:hover {
 
 /* CUSTOMERS */
 
+.collage-customers-row {
+  display: grid;
+  grid-template-columns: minmax(300px, 480px) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+}
+
 .customers {
-    background: var(--cream);
-    padding: 90px 0;
+    background: #EFE4D2;
+    padding: 75px 0;
 }
 
 .customers h2 {
@@ -627,52 +716,170 @@ nav a:hover {
     font-size: 12px;
 }
 
+.photo-collage {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 430px;
+  margin-left: 48px;
+  transform: scale(1.1);
+  transform-origin: center left;
+}
+
+.collage-img {
+  position: absolute;
+  object-fit: cover;
+  border: 6px solid #ffffff; /* creates the clean white gap between overlapping photos */
+  box-sizing: border-box;
+}
+
+/* Tall rounded card on the left */
+.img-left {
+  left: 0;
+  top: 20px;
+  width: 48%;
+  height: 360px;
+  border-radius: 120px 24px 24px 24px;
+  z-index: 1;
+}
+
+/* Shorter rounded card on the top right */
+.img-top-right {
+  right: 12%;
+  top: 0;
+  width: 34%;
+  height: 220px;
+  border-radius: 120px 120px 20px 20px;
+  z-index: 1;
+}
+
+/* Overlapping center/bottom card in front */
+.img-bottom-center {
+  left: 37%;
+  bottom: 0;
+  width: 38%;
+  height: 250px;
+  border-radius: 120px 120px 16px 16px;
+  z-index: 2;
+}
+
+/* Circular badge overlapping bottom-right edge */
+.collage-badge {
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #15803d;
+  color: #ffffff;
+  border: 5px solid #ffffff;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 3;
+}
+
 /* GIFT BUILDER */
 
-.gift-builder {
-    display: grid;
+.gift-customizer {
+  background-color:#F5E7D7;
+  padding: 0;
+}
+
+.gift-customizer-row {
+display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* or 1.1fr 1fr 1.1fr */
+  align-items: stretch; /* stretches all 3 columns to full section height */
+  gap: 40px;
+}
+
+.customizer-intro {
+  align-self: center;
+  padding: 80px 0 80px clamp(24px, 6vw, 90px);
+}
+
+.customizer-card {
+    background-color: #f0ebe1;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  margin-block:80px;
+}
+
+.customizer-card select {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 22px;
+  border: 1px solid #d8d1c5;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+.customizer-card .check-item,
+.customizer-card label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #4a423e;
+}
+
+.customizer-card button {
+  margin-top: 18px;
+  background-color: #5E1D1B;
+  color: #ffffff;
+  border: none;
+  padding: 13px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.customizer-photo-wrap {
+  width: 100%;
+  height: 100%;
+  padding:0;
+  margin:0;
+}
+
+.customizer-card label[for="occasion"],
+.customizer-card > label:first-child {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #3d3532;
+}
+
+.customizer-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+/* Stack or wrap cleanly on medium/small screens */
+@media (max-width: 1024px) {
+  .gift-customizer-row {
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 10%;
+  }
+
+  .customizer-photo-wrap {
+    grid-column: 1 / -1; /* photo spans full width below on tablet */
+  }
 }
 
-.gift-builder > div > p:last-child {
-    color: var(--grey);
-    margin-top: 20px;
-}
-
-.gift-builder form {
-    background: var(--cream);
-    padding: 30px;
-}
-
-.gift-builder form label,
-.gift-builder form > p {
-    display: block;
-    font-size: 12px;
-    margin: 12px 0;
-}
-
-.gift-builder select {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border: 1px solid #ddd;
-    background: white;
-}
-
-.gift-builder input {
-    accent-color: var(--green);
-    margin-right: 6px;
-}
-
-.gift-builder button {
-    margin-top: 15px;
-}
-
-#giftMessage {
-    color: var(--green);
-    font-size: 12px;
+@media (max-width: 680px) {
+  .gift-customizer-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* CONTACT */
@@ -682,8 +889,8 @@ nav a:hover {
     text-align: center;
     color: white;
     background:
-        linear-gradient(#102c25dd, #102c25dd),
-        url("https://images.unsplash.com/photo-1548013146-72479768bada?w=1600")
+        linear-gradient(hsla(165, 47%, 12%, 0.7), hsla(157, 49%, 9%, 0.7)),
+        url("last image.jpg")
         center/cover;
 }
 
@@ -697,8 +904,25 @@ nav a:hover {
 
 .contact-details p {
     margin: 8px;
-    color: #ead6a9;
-    font-size: 13px;
+    color: white;
+    font-size: 12px;
+}
+
+.contact h2{
+    color:#F2E2B1;
+}
+.contact .btn {
+    color: #F2E2B1;
+    background: none;
+    background-color: #5E1D1B;
+}
+
+.contact .eyebrow{
+    color:white;
+}
+
+.contact p{
+    text-shadow: 2px 4px 8px rgba(255, 255, 255, 0.9);
 }
 
 /* FOOTER */
